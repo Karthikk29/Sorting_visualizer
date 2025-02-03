@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sorting Visualizer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrapper">
+    
+    <div class="algo-info" id="algoInfo">
+     
+      <h2>Bubble Sort</h2>
+      <p><strong>Time Complexity:</strong> O(n<sup>2</sup>)</p>
+      <p><strong>Space Complexity:</strong> O(1)</p>
+      <p>Bubble Sort repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order.</p>
+    </div>
+
+    
+    <div class="main-content">
+      <h1>Sorting Visualizer</h1>
+      <div class="controls">
+        <select id="algorithmSelect">
+          <option value="bubbleSort">Bubble Sort</option>
+          <option value="insertionSort">Insertion Sort</option>
+          <option value="selectionSort">Selection Sort</option>
+          <option value="mergeSort">Merge Sort</option>
+          <option value="quickSort">Quick Sort</option>
+          <option value="heapSort">Heap Sort</option>
+        </select>
+        <button id="startBtn">Start Sorting</button>
+        <button id="resetBtn">Reset</button>
+        <div class="speed-control">
+          <label for="speedSlider">Speed:</label>
+          <input type="range" id="speedSlider" min="50" max="1000" value="300" />
+          <span id="speedValue">300ms</span>
+        </div>
+      </div>
+      <div id="arrayContainer" class="array-container"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  <footer>
+    <a href="https://github.com/Karthikk29" target="_blank" class="github-link">
+      <img src="images/GitHub-Background-PNG.png" alt="GitHub Logo" class="github-logo" />
+      Karthikk29
+    </a>
+  </footer>
+  
+</body>
+</html>

@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  body {
+    background-color: #f0f4f8;
+    min-height: 100vh;
+  }
+  
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .algo-info {
+    flex: 1 1 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-width: 250px;
+  }
+  
+  .algo-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .algo-info h2 {
+    margin-bottom: 10px;
+    color: #007bff;
+  }
+  
+  .algo-info p {
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  
+  .main-content {
+    flex: 3 1 600px;
+    text-align: center;
+  }
+  
+  .main-content h1 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.5rem;
+  }
+  
+  .controls {
+    margin-bottom: 20px;
+  }
+  
+  #algorithmSelect,
+  #startBtn,
+  #resetBtn {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    background-color: #fff;
+  }
+  
+  #algorithmSelect:hover,
+  #startBtn:hover,
+  #resetBtn:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  #algorithmSelect:active,
+  #startBtn:active,
+  #resetBtn:active {
+    background-color: #0056b3;
+    transform: scale(0.98);
+  }
+  
+  .speed-control {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  
+  .speed-control label {
+    font-size: 1rem;
+    margin-right: 10px;
+  }
+  
+  .speed-control input {
+    vertical-align: middle;
+    width: 200px;
+    margin-right: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+  }
+  
+  .array-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 20px auto;
+    height: 400px;
+  }
+  
+  .array-element {
+    width: 60px;
+    margin: 0 5px;
+    background: linear-gradient(145deg, #5a6268, #343a40);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border: 1px solid #212529;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    bottom: 0;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .array-element.selected {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  }
+  
+  .array-element.sorted {
+    background: linear-gradient(145deg, #28a745, #1e7e34);
+    border: 1px solid #155724;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  }
+  footer {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #f0f4f8;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    margin-top: 20px;
+  }
+  
+  .github-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+  }
+  
+  .github-link:hover {
+    color: #007bff;
+  }
+  
+  .github-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .github-link:hover .github-logo {
+    transform: scale(1.1);
+  }
+  
+  
+  
+  @media screen and (max-width: 768px) {
+    .array-element {
+      width: 40px;
+    }
+    .wrapper {
+      flex-direction: column;
+    }
+    .algo-info {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .array-element {
+      width: 30px;
+    }
+    #startBtn,
+    #resetBtn,
+    #algorithmSelect {
+      font-size: 0.9rem;
+    }
+    .speed-control input {
+      width: 150px;
+    }
+  }
+  
